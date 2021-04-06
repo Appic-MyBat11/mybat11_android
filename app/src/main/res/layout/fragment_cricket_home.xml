@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.CricketHomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_height="match_parent">
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/joinedRL"
+                        android:visibility="gone"
+                        android:layout_marginTop="-20dp"
+                        android:layout_height="190dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="137dp"
+                            android:scaleType="center"
+                            android:src="@drawable/d11_bg"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="bottom"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="My Matches"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textSize="14dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="View All "
+                                android:drawableRight="@drawable/ic_right_white"
+                                android:textColor="@color/white"
+                                android:gravity="center_vertical"
+                                android:id="@+id/viewall"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="12dp"
+                                />
+                        </LinearLayout>
+                        <android.support.v4.view.ViewPager
+                            android:layout_width="match_parent"
+                            android:layout_height="125dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_alignParentBottom="true"
+                            android:id="@+id/joinedVp"/>
+                        <android.support.design.widget.TabLayout
+                            android:id="@+id/tab_layout"
+                            android:layout_width="match_parent"
+                            app:tabBackground="@drawable/tab_selector"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMaxWidth="10dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="10dp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:src="@drawable/slide_demo"
+                            />
+                        <android.support.v4.view.ViewPager
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:clipToPadding="false"
+                            android:id="@+id/vpAdvertisments"/>
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:id="@+id/inviteBanner"
+                        android:visibility="gone"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="6dp"
+                        android:elevation="3dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="50dp"
+                                android:padding="3dp"
+                                android:src="@drawable/ic_invitation"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="For every friend that plays,"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/montserrat_semibold"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="You get"
+                                        android:textColor="@color/text_color"
+                                        android:textSize="12dp"
+                                        android:fontFamily="@font/montserrat_semibold"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=" ₹100 FREE!"
+                                        android:textColor="@color/winner"
+                                        android:textSize="12dp"
+                                        android:fontFamily="@font/montserrat_semibold"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/text_color"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="16dp"
+                        android:text="Upcoming Matches"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:layout_width="match_parent"
+                                android:id="@+id/matchList"
+                                android:dividerHeight="8px"
+                                android:scrollbars="none"
+                                android:divider="#0fff"
+                                android:nestedScrollingEnabled="false"
+                                android:layout_height="match_parent"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="No match found."
+                                android:gravity="center"
+                                android:textSize="18dp"
+                                android:visibility="gone"
+                                android:id="@+id/noMatch"
+                                android:textColor="@color/text_color"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <include layout="@layout/footer"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

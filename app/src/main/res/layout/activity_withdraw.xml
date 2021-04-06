@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".Activity.WithdrawActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:fontFamily="@font/montserrat_semibold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:layout_marginRight="10dp"
+                android:text="Withdraw Cash From Your Account"
+                android:textColor="@color/text_color"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorAccent"
+                android:layout_marginBottom="5dp"
+                android:text="Available Winning Amount : "
+                android:id="@+id/availableWining"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Enter Amount To Withdraw"
+                android:textColor="@color/text_color"
+                android:textSize="13dp"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:textColorHint="@color/font_color"
+                android:id="@+id/amount"
+                android:background="@drawable/black_border"
+                style="@style/StyledTilEditText"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:hint="Amount"
+                    android:textColor="@color/text_color"
+                    android:text=""
+                    android:background="#0000"
+                    android:maxLength="6"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColorHint="@color/font_color"
+                    android:textSize="14dp"
+                    android:inputType="number"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="7dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Minimum Amount To Withdraw ₹ 300"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Choose Amount To Withdraw"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text=" + 200 "
+                    android:id="@+id/add10"
+                    android:gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/text_color"
+                    android:background="@drawable/black_border"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text=" + 500 "
+                    android:id="@+id/add50"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:textColor="@color/text_color"
+                    android:background="@drawable/black_border"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:text=" + 1000 "
+                    android:id="@+id/add100"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:gravity="center"
+                    android:textColor="@color/text_color"
+                    android:background="@drawable/black_border"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:background="@drawable/btn_primary"
+                    android:text="Withdraw Amount"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="#fff"
+                    android:id="@+id/btnWithdraw"
+                    android:padding="10dp"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

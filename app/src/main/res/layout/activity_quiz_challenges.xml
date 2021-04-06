@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.QuizChallengesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:background="@color/colorPrimary">
+
+            <include layout="@layout/toolbar"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:background="@drawable/btn_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="match name"
+                    android:id="@+id/match_name"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/text_color"
+                    android:text="00:00:00"
+                    android:id="@+id/timeRemaining"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/currentrun"
+            android:layout_height="match_parent">
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swipeRefreshLayout">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:paddingBottom="45dp"
+                    android:clipToPadding="false"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="8dp"
+                            android:id="@+id/crcontest"
+                            android:padding="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:elevation="2dp"
+                                android:id="@+id/joinContest"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_white"
+                                android:text="&#xf091; Enter Contest Code"
+                                android:textSize="12dp"
+                                android:padding="10dp"/>
+
+
+                        </LinearLayout>
+
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:descendantFocusability="blocksDescendants"
+                            android:id="@+id/ll"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="2dp"
+                            android:elevation="2dp"
+                            android:layout_marginBottom="3dp"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:layout_gravity="center"
+                                android:textSize="12dp"
+                                android:id="@+id/allContests"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center"
+                                android:textAllCaps="true"
+                                android:background="@drawable/blue_small_border"
+                                android:textColor="@color/blue"
+                                android:text="View all contests"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text=""
+                android:textSize="14dp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:id="@+id/joinContestcontest"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:paddingLeft="40dp"
+                android:visibility="gone"
+                android:paddingRight="40dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/blue"
+                android:background="@drawable/btn_blue_border"
+                android:layout_gravity="center"/>
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <include layout="@layout/pricecard_bottomsheet"/>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

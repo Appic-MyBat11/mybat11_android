@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChallengesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:background="@color/colorPrimary">
+
+        <include layout="@layout/toolbar"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:background="@drawable/btn_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="match name"
+                android:id="@+id/match_name"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/text_color"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/colorPrimary"
+                android:text="00:00:00"
+                android:id="@+id/timeRemaining"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/antext"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:fontFamily="@font/montserrat_semibold"/>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        app:tabTextAppearance="@style/TabLayoutStyle"
+        android:id="@+id/tabLayout"
+        style="@style/TabLayoutStyle3"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabMode="fixed"
+        android:elevation="6dp"
+        android:background="@color/white"/>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/viewPager"
+        android:layout_marginTop="1px"/>
+
+</LinearLayout>

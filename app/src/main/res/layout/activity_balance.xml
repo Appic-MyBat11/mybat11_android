@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.BalanceActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:elevation="5dp"
+                app:contentPaddingRight="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:padding="1dp"
+                            android:textColor="@color/google_color"
+                            android:textSize="14dp"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_height="wrap_content"
+                            android:text="Total Balance"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rs 0"
+                            android:padding="1dp"
+                            android:id="@+id/totalBalance"
+                            android:textSize="18dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Add Cash"
+                            android:gravity="center"
+                            android:textColor="@color/colorAccent"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/btnAddCash"
+                            android:textAllCaps="true"
+                            android:background="@drawable/blue_border"
+                            android:layout_gravity="center"
+                            android:textSize="12dp"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height=".1px"
+                        android:background="@color/font_color"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:padding="4dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:padding="1dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/font_color"
+                                android:textSize="9dp"
+                                android:textAllCaps="true"
+                                android:layout_height="wrap_content"
+                                android:text="Deposited"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rs 0"
+                                android:padding="1dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/untilizedCash"
+                                android:textSize="12dp"
+                                android:textColor="@color/text_color"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height=".1px"
+                        android:background="@color/font_color"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:padding="1dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/font_color"
+                                android:textSize="9dp"
+                                android:textAllCaps="true"
+                                android:layout_height="wrap_content"
+                                android:text="Winnings"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rs 0"
+                                android:padding="1dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="12dp"
+                                android:textColor="@color/text_color"
+                                android:id="@+id/winning"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/verifyEtext"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="9dp"
+                                android:textColor="@color/font_color"
+                                android:text="Minimum amount to withdraw 300"
+
+                                />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:text="Cash Withdraw"
+                            android:id="@+id/btnWithdraw"
+                            android:layout_width="wrap_content"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:textColor="@color/colorAccent"
+                            android:paddingLeft="10dp"
+                            android:textAllCaps="true"
+                            android:paddingRight="10dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:background="@drawable/blue_border"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="11dp"
+                            android:layout_height="30dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/font_color"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:padding="4dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:padding="1dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/font_color"
+                                android:textSize="9dp"
+                                android:textAllCaps="true"
+                                android:layout_height="wrap_content"
+                                android:text="Bonus"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rs 0"
+                                android:padding="1dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="12dp"
+                                android:textColor="@color/text_color"
+                                android:id="@+id/bonus"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="5dp"
+                app:cardCornerRadius="6dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/myTrsancations"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:drawableRight="@drawable/ic_right"
+                    android:textColor="@color/text_color"
+                    android:text="Recent Transactions"/>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

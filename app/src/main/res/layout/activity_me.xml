@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f4f5f4"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MeActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/toolbar"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/scroll"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="15dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:id="@+id/profileBanner"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="90dp"
+                            android:id="@+id/userImage"
+                            android:layout_height="90dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp" />
+
+                        <LinearLayout
+                            android:layout_width="30dp"
+                            android:padding="5dp"
+                            android:id="@+id/camera"
+                            android:layout_marginLeft="-90px"
+                            android:layout_marginBottom="-80px"
+                            android:background="@drawable/white_circle"
+                            android:layout_height="30dp">
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_camera"
+
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:textSize="16dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/white"
+                                android:text="Team Name"
+                                android:id="@+id/teamName"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:orientation="horizontal"
+                                android:id="@+id/verifiedLL"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/ic_verified_user"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Verified Account"
+                                    android:textColor="@color/white"
+                                    android:textSize="13dp"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:layout_gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:orientation="horizontal"
+                                android:id="@+id/verifyLL"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/ic_cancel"
+                                    android:layout_height="wrap_content" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Verification Pending"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="13dp"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:layout_gravity="center"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:id="@+id/verifyNowLL"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:background="@drawable/green_button_background"
+                                    android:padding="8dp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:id="@+id/verifyText"
+                                    android:layout_height="wrap_content"
+                                    android:text="Verify Now"
+                                    android:textColor="#fff"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    android:elevation="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/account"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/text_color"
+                                android:textSize="16dp"
+                                android:text="Account"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="More"
+                                android:textSize="14dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/moreA"
+                                android:visibility="gone"
+                                android:textColor="@color/blue"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:orientation="vertical"
+                                android:padding="4dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rs 0"
+                                    android:padding="1dp"
+                                    android:id="@+id/untilizedCash"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/text_color"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:padding="1dp"
+                                    android:textColor="@color/google_color"
+                                    android:textAllCaps="true"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:layout_height="wrap_content"
+                                    android:text="Deposited"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="Add Cash"
+                                android:gravity="center"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/white"
+                                android:padding="5dp"
+                                android:id="@+id/btnAddCash"
+                                android:background="@drawable/btn_primary"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:orientation="vertical"
+                                android:padding="4dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rs 0"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:padding="1dp"
+                                    android:id="@+id/winning"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/text_color"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:padding="1dp"
+                                    android:textColor="@color/google_color"
+                                    android:textAllCaps="true"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:layout_height="wrap_content"
+                                    android:text="Winnings"/>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/verifyEtext1"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:textSize="9dp"
+                                    android:textColor="@color/font_color"
+                                    android:text="Minimum amount to withdraw 300"
+
+                                    />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="Withdraw"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:visibility="gone"
+                                android:padding="5dp"
+                                android:id="@+id/btnWithdraw"
+                                android:background="@drawable/btn_primary"
+                                android:layout_gravity="center_vertical"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:orientation="vertical"
+                                android:padding="4dp"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rs 0"
+                                    android:padding="1dp"
+                                    android:id="@+id/bonus"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/text_color"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:padding="1dp"
+                                    android:textColor="@color/google_color"
+                                    android:textAllCaps="true"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:layout_height="wrap_content"
+                                    android:text="Cash Bonus"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#999"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Transactions"
+                            android:layout_gravity="left"
+                            android:textColor="@color/text_color"
+                            android:padding="10dp"
+                            android:drawableRight="@drawable/ic_right"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_marginBottom="5dp"
+                            android:id="@+id/recent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    android:elevation="1dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textColor="@color/text_color"
+                            android:textSize="16dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Refer &amp; Earn"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="12dp"
+                            android:text="The more you refer, the bigger your bonus."/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:orientation="vertical"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:padding="5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Invite Your Friends &amp; Both of You Will Get ₹111 FREE Cash Bonus."
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_gravity="center"
+                                android:id="@+id/inviteFriend"
+                                android:text="Invite Friend"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="#ffffff"
+                                android:background="@drawable/btn_primary"
+                                android:gravity="center"
+                                android:paddingLeft="25dp"
+                                android:paddingRight="25dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginBottom="3dp"
+                                android:layout_height="32dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    android:elevation="1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="Playing Stats"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/contests"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="27"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="18dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:id="@+id/totalContests"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="13dp"
+                                    android:textColor="#999"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:text="Contest Played"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="1px"
+                                android:layout_height="match_parent"
+                                android:background="@color/text_color"
+                                android:layout_marginTop="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/matches"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="36"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="18dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:id="@+id/totalmatches"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="13dp"
+                                    android:textColor="#999"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:text="Matches"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/series"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="27"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="18dp"
+                                    android:id="@+id/totalSeries"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="13dp"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:textColor="#999"
+                                    android:text="Series"/>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="1px"
+                                android:layout_height="match_parent"
+                                android:background="@color/text_color"
+                                android:layout_marginBottom="10dp"/>
+
+                            <LinearLayout
+                                android:layout_width="0px"
+                                android:gravity="center"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_width="60dp"
+                                    android:padding="5dp"
+                                    android:layout_height="60dp"
+                                    android:src="@drawable/wins"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="36"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="18dp"
+                                    android:id="@+id/totalWins"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="13dp"
+                                    android:textColor="#999"
+                                    android:fontFamily="@font/montserrat_regular"
+                                    android:text="Contests Won"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="6dp"
+                            android:id="@+id/leaderboard"
+                            android:paddingRight="6dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/text_color"
+                            android:text="View Leaderboard"
+                            android:drawableRight="@drawable/ic_right"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="6dp"
+                    android:elevation="2dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:padding="10dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="Personal Details"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Full Profile"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/fullProfile"
+                                android:textSize="14dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="#999"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/name"
+                                android:padding="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="#999"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/email"
+                                android:padding="3dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:textColor="#999"
+                                android:id="@+id/phone"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:padding="3dp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="@color/blue"
+                            android:text="Change Password"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="12dp"
+                            android:id="@+id/changePssword"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="@color/blue"
+                            android:text=" log out"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:drawableLeft="@drawable/ic_power"
+                            android:textSize="12dp"
+                            android:id="@+id/logout"/>
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+        <include layout="@layout/footer" android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:id="@+id/profile_sheet"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="8dp"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:paddingBottom="45dp"
+                android:clipToPadding="false"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.img.mybat11.Api.ExpandableHeightGridView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/allImgs"
+                    android:numColumns="5"
+                    android:padding="8dp"
+                    android:horizontalSpacing="4dp"
+                    android:verticalSpacing="4dp"/>
+
+
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="Apply"
+                android:textSize="14dp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:id="@+id/btnApply"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:elevation="3dp"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_green"
+                android:layout_gravity="center"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

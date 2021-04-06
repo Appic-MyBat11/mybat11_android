@@ -1,0 +1,902 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.BankVerificationFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="5dp"
+                app:cardElevation="6dp"
+                android:visibility="gone"
+                android:id="@+id/bankVerified"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_bank_green"
+                            android:layout_gravity="center_vertical"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:layout_marginLeft="5dp"
+                            android:id="@+id/t1"
+                            android:layout_gravity="center_vertical"
+                            android:typeface="sans"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/text_color"
+                            android:text="Verify your BANK Details"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@color/main_green_color"
+                        android:id="@+id/bankText"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14dp"
+                        android:text="&#10004; Your Bank details are already verified."/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:id="@+id/bankDetails"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="6dp"
+                android:visibility="gone"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:id="@+id/t"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:typeface="sans"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/text_color"
+                            android:text="Bank Details"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="Account Holder"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/holderText"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/holderName"
+                                android:text="Name"
+                                android:textColor="@color/text_color"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="Account No."
+                                android:id="@+id/accText"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/accNo"
+                                android:text="Name"
+                                android:textColor="@color/text_color"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="IFSC Code"
+                                android:textSize="12dp"
+                                android:id="@+id/ifscText"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/number"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="ifscCode"
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Bank Name"
+                                android:textSize="12dp"
+                                android:id="@+id/bankNameText"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/bnkName"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Name"
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="Branch"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/branchText"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/branch"
+                                android:text="Name"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:textSize="12dp"
+                                android:text="Withdraw Type"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/withtype"
+                                android:text="Name"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/mobilety"
+
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="Upi Id"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/withmobile"
+                                android:text="Name"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:visibility="gone"
+                            android:layout_marginRight="5dp"
+                            android:id="@+id/upity"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="Upi account name"
+                                android:textSize="12dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/upinametext"
+                                android:text="Name"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="1"
+                                android:text="State"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/stateText"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_weight="2"
+                                android:id="@+id/state"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="Name"
+                                android:textColor="@color/text_color"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="136dp"
+                            android:layout_height="136dp"
+                            android:id="@+id/passbook"
+                            android:layout_gravity="center"/>
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="1dp"
+                            android:visibility="gone"
+                            android:layout_marginBottom="10dp"
+                            android:textColor="@color/red"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/comment"
+                            android:gravity="center"
+                            android:text="Your Bank Proof is rejected"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="10dp"
+                            android:layout_margin="2dp"
+                            android:textColor="@color/text_color"
+                            android:id="@+id/imageText"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Click on image to view full size image."
+                            android:gravity="right"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="6dp"
+                android:layout_margin="5dp"
+                android:id="@+id/bankNotVerified"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/notVerified"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="8dp"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_bank_red"
+                                android:layout_gravity="center_vertical"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_gravity="center_vertical"
+                                android:id="@+id/t2"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:typeface="sans"
+                                android:textColor="@color/text_color"
+                                android:text="Verify your BANK Details"
+                                />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/select_image"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/img"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:textColor="#fff"
+                            android:textSize="16dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:padding="10dp"
+                            android:id="@+id/btnUpload"
+                            android:text="Upload Bank account Proof"
+                            android:layout_marginTop="22dp"
+                            android:background="@color/winner"/>
+
+                        <ImageView
+                            android:layout_width="1px"
+                            android:layout_height="1px"
+                            android:id="@+id/uimage"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="#aaa"
+                            android:id="@+id/t3"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="10dp"
+                            android:padding="2dp"
+                            android:text="Image size up to 4mb*"/>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/name"
+                            style="@style/StyledTilEditText2"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:hint="Account Holder Name"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ qwertyuiopasdfghjklzxcvbnm"
+                                android:textSize="14dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textColor="@color/text_color"
+                                android:inputType="textCapCharacters"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="18dp"
+                            android:visibility="gone"
+                            android:textColor="#999"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/t4"
+                            android:textSize="10dp"
+                            android:text="As per BAnk Proof"/>
+
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/accountNumber"
+                            style="@style/StyledTilEditText2"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:hint="Account Number*"
+                                android:textSize="14dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:maxLength="18"
+                                android:textColor="@color/text_color"
+                                android:inputType="number"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/VaccountNumber"
+                            style="@style/StyledTilEditText2"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:hint="Verify Account Number*"
+                                android:maxLength="18"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color"
+                                android:inputType="number"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:id="@+id/bankName"
+                            android:layout_marginTop="8dp"
+                            style="@style/StyledTilEditText2"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:hint="Bank Name*"
+                                android:textSize="14dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890&amp;  qwertyuiopasdfghjklzxcvbnm"
+                                android:textColor="@color/text_color"
+                                android:inputType="textCapCharacters"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/branchName"
+                            style="@style/StyledTilEditText2"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:hint="Branch Name*"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:textSize="14dp"
+                                android:digits="QWERTYUIOPASDFGHJKLMNBVCXZ  qwertyuiopasdfghjklzxcvbnm"
+                                android:textColor="@color/text_color"
+                                android:inputType="textCapCharacters"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="8dp"
+                            android:id="@+id/ifscCode"
+                            style="@style/StyledTilEditText2"
+                            android:layout_height="wrap_content">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:hint="IFSC Code*"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:maxLength="11"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890  qwertyuiopasdfghjklzxcvbnm"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color"
+                                android:inputType="textCapCharacters"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:id="@+id/t5"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="State*"
+                            android:textSize="10dp"
+                            android:textColor="#999"/>
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="3dp"
+                            android:entries="@array/india_states"
+                            android:background="@drawable/black_border"
+                            android:layout_marginRight="8dp"
+                            android:id="@+id/stateSpinner"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#999"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="18dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Select withdrawals type(optional)"
+                            android:textSize="10dp"
+                            android:textColor="#999"/>
+
+                        <Spinner
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="3dp"
+                            android:entries="@array/withraw_type"
+                            android:background="@drawable/black_border"
+                            android:layout_marginRight="8dp"
+                            android:id="@+id/typeSpinner"
+                            />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#999"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp" />
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        app:helperText="ex: xxxxxxxxxx@xxx"
+                        android:id="@+id/mobileNumber"
+                        style="@style/StyledTilEditText2"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:hint="UPI ID"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/text_color" />
+
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:id="@+id/upiname"
+                        style="@style/StyledTilEditText2"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:hint="Name"
+                            android:textSize="14dp"
+                            android:maxLength="10"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/text_color"
+                            android:inputType="text"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <CheckBox android:id="@+id/iagree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="All details submit correct, i agree with these details." />
+                     </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="18dp"
+                        android:textColor="#999"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/t6"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:text="* All fields are mandatory"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Submit for Verification"
+                        android:padding="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/btnSubmit"
+                        android:background="@color/colorAccent"
+                        android:textColor="@color/white"
+                        android:layout_margin="15dp"
+                        android:gravity="center"/>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardElevation="6dp"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/invalidBank"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/ic_bank_red"
+                            android:layout_gravity="center_vertical"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:id="@+id/t7"
+                            android:layout_marginLeft="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:typeface="sans"
+                            android:textColor="@color/colorAccent"
+                            android:text="Verify your BANK Details"
+                            />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:padding="8dp"
+                        android:textColor="@color/text_color"
+                        android:id="@+id/t8"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14dp"
+                        android:text="To update your bank details please complete the steps mentioned below :"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="12dp"
+                        android:padding="8dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:id="@+id/t9"
+                        android:lineSpacingExtra="10px"
+                        android:text="\u2022 Verify your mobile number.\n\u2022 verify your Email Id. \n\u2022 verify your PAN card."
+                        android:textColor="#555"
+                        android:layout_marginLeft="10dp"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

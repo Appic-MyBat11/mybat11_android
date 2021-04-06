@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/btnCancel"
+        android:layout_width="34dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:visibility="gone"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:elevation="6dp"
+        android:src="@drawable/ic_cancel_popup" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/popupImage"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_gravity="center"
+                android:textSize="14dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/closepop"
+                android:fontFamily="@font/montserrat_semibold"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:background="@drawable/blue_small_border1"
+                android:textColor="@color/blue"
+                android:text="Close"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

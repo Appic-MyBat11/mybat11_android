@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".Activity.ChangePassowrdActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:touchscreenBlocksFocus="false"
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="6dp"
+            android:layout_margin="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:gravity="center"
+                        android:textColor="@color/text_color"
+                        android:text="Your Password minimum 8 characters with at least 1 number or symbol character"
+
+                        />
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/StyledTilEditText"
+                        android:textColorHint="@color/text_color"
+
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/oldpassword">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:padding="10dp"
+                            android:inputType="text"
+                            android:textColorHint="@color/text_color"
+                            android:hint="Old Password"
+                            android:textSize="13dp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/StyledTilEditText"
+                        android:textColorHint="@color/text_color"
+
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/password">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:padding="10dp"
+                            android:inputType="text"
+                            android:textColorHint="@color/text_color"
+                            android:hint="New Password"
+                            android:textSize="13dp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/StyledTilEditText"
+                        android:textColorHint="@color/text_color"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:id="@+id/cpassword">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:padding="10dp"
+                            android:inputType="text"
+                            android:textColorHint="@color/text_color"
+                            android:hint="Confirm Password"
+                            android:textSize="13dp"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="25dp"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Change Password"
+                    android:id="@+id/submit"/>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>

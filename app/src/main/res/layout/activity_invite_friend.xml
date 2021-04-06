@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.InviteFriendActivity">
+
+    <include
+        layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:src="@drawable/refer"
+                    android:scaleType="fitXY"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17dp"
+                    android:gravity="center"
+                    android:textColor="@color/text_color"
+                    android:text="Invite your friends Reward yourself"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For every friend that you will reffer, you get ₹51 and your friend get ₹100"
+                    android:gravity="center"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="12dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:gravity="right"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/design_default_color_primary"
+                        android:id="@+id/rules"
+                        android:text="Rules of Fair Play"/>
+
+                    <TextView
+                        android:layout_width="0.5px"
+                        android:layout_height="match_parent"
+                        android:background="@color/google_color"
+                        tools:ignore="Suspicious0dp" />
+
+                    <TextView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:textSize="13dp"
+                        android:gravity="left"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/design_default_color_primary"
+                        android:id="@+id/howitworks"
+                        android:text="How It Works"/>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    app:cardCornerRadius="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Share your invite code"
+                            android:textAllCaps="true"
+                            android:gravity="center"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="11dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="EC2951"
+                            android:gravity="center"
+                            android:padding="8dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/code"
+                            android:textIsSelectable="true"
+                            android:textColor="@color/text_color"
+                            android:textSize="25dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Invite Your Friends"
+                            android:background="@drawable/btn_green"
+                            android:gravity="center"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/more"
+                            android:padding="10dp"
+                            android:layout_margin="6dp"
+                            android:textColor="@color/white"/>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/black_border">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:paddingTop="17dp"
+                        android:paddingBottom="17dp"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="12dp"
+                        android:id="@+id/totalJoined"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="12dp"
+                    android:src="@drawable/ic_right"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

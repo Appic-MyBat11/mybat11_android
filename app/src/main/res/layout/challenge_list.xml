@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="3dp"
+    android:id="@+id/mainl"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        android:layout_margin="5dp"
+        app:cardElevation="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Prize pool"
+                        android:textAllCaps="true"
+                        android:paddingBottom="3dp"
+                        android:id="@+id/prizetxt"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/font_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:text="₹ 2100"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/text_color"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:id="@+id/prizeMoney"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Winners"
+                        android:gravity="right"
+                        android:textAllCaps="true"
+                        android:paddingBottom="3dp"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/font_color" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:gravity="right"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/numWinners"/>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="1.5"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/teamEnteredPB"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:progress="12"
+                        android:max="16"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/custom_progressbar"
+                        android:layout_height="10dp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10dp"
+                            android:textColor="@color/text_color"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="4 teams left"
+                            android:id="@+id/teamsLeft"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10dp"
+                            android:textColor="@color/text_color"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="16 Teams"
+                            android:id="@+id/totalTeams"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:background="#eee"
+                android:id="@+id/winnerLL"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="true"
+                    android:text=""
+                    android:visibility="gone"
+                    android:paddingBottom="3dp"
+                    android:id="@+id/t3"
+                    android:textSize="8dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/font_color" />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/c_bg"
+                        android:text="M"
+                        android:id="@+id/m"
+                        android:visibility="gone"
+                        android:textColor="@color/text_color"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="10dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/c_bg"
+                        android:text="C"
+                        android:visibility="gone"
+                        android:id="@+id/c"
+                        android:textColor="@color/text_color"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="10dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:background="@drawable/c_bg"
+                        android:text="B"
+                        android:id="@+id/b"
+                        android:visibility="gone"
+                        android:textColor="@color/text_color"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="10dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:textSize="11dp"
+                        android:textColor="@color/text_color"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:visibility="gone"
+                        android:id="@+id/bonusPer"
+                        android:layout_gravity="center_vertical"
+                        android:text="20% bonus"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Join Fee"
+                        android:gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:textSize="10dp"
+                        android:id="@+id/jointxt"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/font_color" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹50"
+                        android:gravity="right"
+                        android:textSize="14dp"
+                        android:background="@drawable/btn_green"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/white"
+                        android:id="@+id/btnJoin"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

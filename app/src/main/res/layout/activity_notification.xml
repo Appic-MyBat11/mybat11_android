@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.NotificationActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eaeaea"
+                android:text="Today"
+                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:padding="6dp"
+                android:textSize="14dp"/>
+
+            <com.img.mybat11.Api.ExpandableHeightListView
+                android:layout_width="match_parent"
+                android:id="@+id/todayNotification"
+                android:layout_height="wrap_content"
+                android:divider="@color/font_color"
+                android:dividerHeight="1px"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/noNotifications"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_no_notification"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="No notifications for today"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eaeaea"
+                android:text="Older"
+                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:padding="6dp"
+                android:textSize="14dp"/>
+
+            <com.img.mybat11.Api.ExpandableHeightListView
+                android:layout_width="match_parent"
+                android:id="@+id/olderNotification"
+                android:layout_height="wrap_content"
+                android:divider="@color/font_color"
+                android:dividerHeight="1px"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

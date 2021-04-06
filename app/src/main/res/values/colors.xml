@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C20a0a</color>
+    <color name="colorPrimaryDark">#C20a0a</color>
+    <color name="colorAccent">#3759a5</color>
+    <color name="winner">#f59a23</color>
+    <color name="blue">#3759a5</color>
+    <color name="unselected">#444f5b</color>
+    <color name="lightgray">#f9f9f9</color>
+    <color name="selected">#333d48</color>
+    <color name="red">#ff0000</color>
+    <color name="lightBlue">#dfe9fa</color>
+    <color name="changeColor">#ffa500</color>
+    <color name="footer_bg">#efefef</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="white_trans">#80ffffff</color>
+    <color name="icon_color">#EE4C96</color>
+    <color name="text_color">#323232</color>
+    <color name="more_text_color">#111213</color>
+    <color name="google_color">#7b7a7a</color>
+    <color name="trans">#00ffffff</color>
+    <color name="black_trans">#70000000</color>
+    <color name="table_header">#ffa500</color>
+    <color name="table_header1">#e8e8e8</color>
+    <color name="bg_color">#0A0F1C</color>
+    <color name="list_bg">#0F1629</color>
+    <color name="font_color">#7b7a7a</color>
+    <color name="gray_text_color">#dddddd</color>
+    <color name="gray_font_color">#868686</color>
+    <color name="main_green_color">#25ba39</color>
+    <color name="filter_selected">#544385F5</color>
+    <color name="color_c">#aaf5a623</color>
+    <color name="color_vc">#aa21dceb</color>
+    <color name="m_bg">#575821</color>
+    <color name="b_bg">#6F2B76</color>
+    <color name="c_bg">#234B28</color>
+    <color name="radio_button_selected_color">#ffa500</color>
+    <color name="radio_button_unselected_color">@android:color/transparent</color>
+    <color name="border_color_social">#3b599870</color>
+    <color name="color1">#644385f5</color>
+
+</resources>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activity.MyMatchesCricketActivity"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:background="@color/colorPrimary"
+                app:theme="@style/MyDarkToolbarStyle"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/white"
+                        android:id="@+id/profileImage"
+                        android:layout_gravity="center_vertical"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="15dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerVertical="true"
+                        android:text="FEED"/>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <include layout="@layout/footer"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:id="@+id/profileLL"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:background="#eee">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:id="@+id/userImage"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teamName"
+                    android:textColor="@color/text_color"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/right_arrow"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/myProfile"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_profile"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_marginLeft="60dp"
+            android:background="@color/text_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/wallet"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_balance"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="My Balance"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:id="@+id/btnAddCash"
+                android:paddingRight="15dp"
+                android:text=""
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:id="@+id/rewards"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_rewards"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Rewards &amp; Offers"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/invite"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_referrals"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Referrals"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_marginLeft="60dp"
+            android:background="@color/text_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/settings"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_info"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Info &amp; Settings"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/pointSystem"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/point_system"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Point System"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
+

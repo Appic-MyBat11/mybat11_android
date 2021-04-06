@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MyTeamActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:background="@color/colorPrimary">
+
+        <include layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:background="@drawable/btn_white">
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:text="match name"
+                android:layout_weight="1"
+                android:id="@+id/match_name"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/colorPrimary"
+                android:text="00:00:00"
+                android:fontFamily="@font/montserrat_semibold"
+                android:id="@+id/timeRemaining"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You can create upto 6 teams in a contest"
+        android:gravity="center"
+        android:padding="10dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:background="#fff"
+        android:textColor="@color/text_color"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/teamList"
+        android:layout_weight="1"
+        android:divider="#0fff"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:id="@+id/noTeamLL"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_weight="1">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="120dp"
+            android:layout_margin="10dp"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/t1"
+            android:layout_margin="5dp"
+            android:textColor="@color/colorPrimary"
+            android:text="Create your first team."/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/ctll"
+        android:background="@color/blue"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:text="Create Team"
+            android:textSize="16dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/montserrat_semibold"
+            android:id="@+id/createTeam"
+            android:textStyle="bold"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:textColor="@color/blue"
+            android:background="@drawable/btn_white"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

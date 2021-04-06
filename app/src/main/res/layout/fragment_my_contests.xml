@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.MyContestsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#f2f2f2"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:elevation="6dp"
+                android:background="@color/google_color"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/classic"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:src="@drawable/icon_classic_active"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/type_bg"/>-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Classic"
+                            android:gravity="center"
+                            android:id="@+id/classicText"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:id="@+id/classicSelected"
+                        android:background="@color/main_green_color"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/batting"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:src="@drawable/icon_batting_active"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/type_bg"/>-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Batting"
+                            android:gravity="center"
+                            android:id="@+id/battinngText"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:id="@+id/battingSelected"
+                        android:visibility="gone"
+                        android:background="@color/main_green_color"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/bowling"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:src="@drawable/icon_batting_active"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/type_bg"/>-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Bowling"
+                            android:gravity="center"
+                            android:id="@+id/bowlingText"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:id="@+id/bowlingSelected"
+                        android:visibility="gone"
+                        android:background="@color/main_green_color"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/currentrun"
+            android:layout_height="match_parent">
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/swipeRefreshLayout">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:paddingBottom="45dp"
+                    android:clipToPadding="false"
+                    android:layout_height="match_parent"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:paddingLeft="8dp"
+                            android:id="@+id/crcontest"
+                            android:paddingRight="8dp"
+                            android:paddingTop="10dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:elevation="2dp"
+                                android:id="@+id/joinContest"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_white"
+                                android:text="&#xf091; Enter Contest Code"
+                                android:textSize="12dp"
+                                android:padding="10dp"/>
+
+                            <TextView
+                                android:layout_width="0px"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_weight="1"
+                                android:id="@+id/addContest"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:gravity="center"
+                                android:layout_height="wrap_content"
+                                android:elevation="2dp"
+                                android:background="@drawable/btn_white"
+                                android:text="&#xf036; Create Own Contest"
+                                android:textSize="12dp"
+                                android:padding="10dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="8dp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Sort by"
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/montserrat_regular"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/btn_white"
+                                        android:text="Entry Fee"
+                                        android:paddingTop="7dp"
+                                        android:paddingBottom="7dp"
+                                        android:id="@+id/entryFee"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="15dp"
+                                        android:elevation="2dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_marginTop="2dp"
+                                        android:layout_marginLeft="2dp"
+                                        android:layout_marginBottom="2dp"
+                                        android:textSize="12dp"
+                                        android:textColor="@color/text_color"/>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/btn_white"
+                                        android:text="Contest Size"
+                                        android:paddingTop="7dp"
+                                        android:paddingBottom="7dp"
+                                        android:id="@+id/contestSize"
+                                        android:paddingLeft="15dp"
+                                        android:paddingRight="15dp"
+                                        android:elevation="2dp"
+                                        android:layout_margin="2dp"
+                                        android:textSize="12dp"
+                                        android:textColor="@color/text_color"/>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="All Filters"
+                                android:textColor="@color/text_color"
+                                android:drawableRight="@drawable/ic_controls"
+                                android:drawablePadding="5dp"
+                                android:paddingLeft="10dp"
+                                android:paddingBottom="10dp"
+                                android:paddingTop="5dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:id="@+id/filter"
+                                android:gravity="center"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="@color/text_color"
+                            android:layout_margin="8dp"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:descendantFocusability="blocksDescendants"
+                            android:id="@+id/ll"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="2dp"
+                            android:elevation="2dp"
+                            android:layout_marginBottom="3dp"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:layout_gravity="center"
+                                android:textSize="12dp"
+                                android:id="@+id/allContests"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:gravity="center"
+                                android:textAllCaps="true"
+                                android:background="@drawable/blue_small_border"
+                                android:textColor="@color/blue"
+                                android:text="View all contests"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Create Team"
+                android:textSize="14dp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_semibold"
+                android:id="@+id/createTeam"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="8dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/blue"
+                android:background="@drawable/btn_blue_border"
+                android:layout_gravity="center"/>
+
+
+
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/coming_soon"
+            android:visibility="gone"
+            android:src="@drawable/coming_soon_images"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <include layout="@layout/pricecard_bottomsheet"/>
+</android.support.design.widget.CoordinatorLayout>

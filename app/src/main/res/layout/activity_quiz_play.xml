@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="fitXY"
+    android:background="@drawable/playquiz"
+    tools:context=".Activity.QuizPlayActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/popupforlangage"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    app:cardCornerRadius="6dp"
+                    android:elevation="6dp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:padding="20dp"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Quiz language"
+                            android:textSize="15dp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/toggle"
+                                android:layout_width="200dp"
+                                android:layout_height="35dp"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@drawable/btn_primary"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginLeft="3dp"
+                                    android:id="@+id/english"
+                                    android:background="@drawable/btn_white"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="English"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:textColor="@color/colorPrimary"/>
+                                 <RadioButton
+                                    android:layout_marginTop="3dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginRight="3dp"
+                                    android:id="@+id/hindi"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/btn_primary"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="Hindi"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:textColor="@color/white" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                        <pl.droidsonroids.gif.GifImageView
+                            android:layout_margin="40px"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:src="@drawable/watch"
+                            />
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="14dp"
+                            android:layout_marginTop="20dp"
+                            android:id="@+id/startpopuptime"
+                            android:textColor="@color/font_color"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:gravity="center"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </android.support.v7.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/questionlayout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:background="@color/colorPrimary">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"  >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center_vertical"
+                        android:text="⏰ Quiz Time"
+                        android:id="@+id/match_name"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/btn_white"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/text_color"
+                        android:text="00:00"
+                        android:textSize="16dp"
+                        android:paddingRight="15px"
+                        android:paddingLeft="15px"
+                        android:id="@+id/timeRemaining"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorAccent"
+                                android:text=""
+                                android:id="@+id/questionscount"
+                                android:textSize="17dp"
+                                android:fontFamily="@font/montserrat_semibold"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="12dp"
+                                android:textColor="@color/white"
+                                android:text=""
+                                android:textSize="22dp"
+                                android:id="@+id/question"
+                                android:fontFamily="@font/montserrat_semibold"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="-5dp"
+                                android:orientation="vertical">
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    app:cardCornerRadius="10dp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:id="@+id/a"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:textSize="18dp"
+                                            android:text="A"
+                                            android:textColor="@color/white"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:gravity="center"
+                                            android:background="@drawable/b_bg"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:textColor="@color/text_color"
+                                            android:text=""
+                                            android:id="@+id/answera"
+                                            android:textSize="20dp"
+                                            android:fontFamily="@font/montserrat_semibold"/>
+
+                                    </LinearLayout>
+
+
+                                </android.support.v7.widget.CardView>
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    app:cardCornerRadius="10dp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:id="@+id/b"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:textSize="18dp"
+                                            android:text="B"
+                                            android:textColor="@color/white"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:gravity="center"
+                                            android:background="@drawable/b_bg"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:textColor="@color/text_color"
+                                            android:text=""
+                                            android:textSize="20dp"
+                                            android:id="@+id/answerb"
+                                            android:fontFamily="@font/montserrat_semibold"/>
+
+                                    </LinearLayout>
+
+                                </android.support.v7.widget.CardView>
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    app:cardCornerRadius="10dp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:id="@+id/c"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:textSize="18dp"
+                                            android:text="C"
+                                            android:textColor="@color/white"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:gravity="center"
+                                            android:background="@drawable/b_bg"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:textColor="@color/text_color"
+                                            android:text=""
+                                            android:textSize="20dp"
+                                            android:id="@+id/answerc"
+                                            android:fontFamily="@font/montserrat_semibold"/>
+
+                                    </LinearLayout>
+                                </android.support.v7.widget.CardView>
+                                <android.support.v7.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dp"
+                                    app:cardCornerRadius="10dp">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:id="@+id/d"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="35dp"
+                                            android:layout_height="35dp"
+                                            android:textSize="18dp"
+                                            android:text="D"
+                                            android:textColor="@color/white"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:gravity="center"
+                                            android:background="@drawable/b_bg"/>
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:textColor="@color/text_color"
+                                            android:text=""
+                                            android:id="@+id/answerd"
+                                            android:textSize="20dp"
+                                            android:fontFamily="@font/montserrat_semibold"/>
+
+                                    </LinearLayout>
+                                </android.support.v7.widget.CardView>
+
+
+
+                            </LinearLayout>
+
+
+
+
+
+
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="30dp">
+
+
+                            <ProgressBar
+                                android:id="@+id/EnteredPB"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:progressTint="@color/colorPrimary"
+                                android:layout_height="30dp"
+                                android:progress="15"
+                                android:max="15"
+                                android:progressDrawable="@drawable/custom_progressbar"
+                                style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="15 Sec"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+                                android:id="@+id/progesstext"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:fontFamily="@font/montserrat_semibold"/>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/popupforend"
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="6dp"
+                android:elevation="6dp"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/colorPrimary">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"  >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:gravity="center_vertical"
+                                android:text="⏰ Quiz Complete in"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/btn_white"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:textColor="@color/text_color"
+                                android:text="00:00"
+                                android:textSize="16dp"
+                                android:paddingRight="15px"
+                                android:paddingLeft="15px"
+                                android:id="@+id/timeRemaining1"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        app:cardCornerRadius="6dp"
+                        android:elevation="6dp"
+
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:id="@+id/ttlquestion"
+                                android:textSize="14dp"
+                                android:textColor="@color/colorPrimary"
+                                android:fontFamily="@font/montserrat_semibold"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Total Questions"
+                                android:textSize="11dp"
+                                android:textColor="@color/font_color"
+                                android:fontFamily="@font/montserrat_regular"/>
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="6dp"
+                            android:elevation="6dp"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:gravity="center"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/attamptquestion"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/colorAccent"
+                                    android:fontFamily="@font/montserrat_semibold"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Attempted Questions"
+                                    android:textSize="11dp"
+                                    android:textColor="@color/font_color"
+                                    android:fontFamily="@font/montserrat_regular"/>
+
+
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            app:cardCornerRadius="6dp"
+                            android:elevation="6dp"
+
+                            >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:padding="10dp"
+                                android:gravity="center"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="0"
+                                    android:id="@+id/misquestion"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/colorPrimary"
+                                    android:fontFamily="@font/montserrat_semibold"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Missed Questions"
+                                    android:textSize="11dp"
+                                    android:textColor="@color/font_color"
+                                    android:fontFamily="@font/montserrat_regular"/>
+
+
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="You compeleted quiz in: "
+                            android:textColor="@color/text_color"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/montserrat_semibold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="29 Sec "
+                            android:id="@+id/completedquizin"
+                            android:textSize="12dp"
+                            android:textColor="@color/colorAccent"
+                            android:fontFamily="@font/montserrat_semibold"/>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/gotorank"
+                        android:layout_marginLeft="5dp"
+                        app:cardCornerRadius="6dp"
+                        android:elevation="6dp"
+
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Check Rank"
+                                android:textSize="14dp"
+                                android:textAllCaps="true"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/montserrat_semibold"/>
+
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/backhome"
+                        android:layout_marginLeft="5dp"
+                        app:cardCornerRadius="6dp"
+                        android:elevation="6dp"
+
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Back to Home"
+                                android:textSize="14dp"
+                                android:textAllCaps="true"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/montserrat_semibold"/>
+
+
+
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

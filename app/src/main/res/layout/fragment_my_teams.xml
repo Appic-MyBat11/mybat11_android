@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.MyTeamsFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f2f2f2"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:elevation="6dp"
+                android:background="@color/google_color"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/classic"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:src="@drawable/icon_classic_active"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/type_bg"/>-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Classic"
+                            android:gravity="center"
+                            android:id="@+id/classicText"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:id="@+id/classicSelected"
+                        android:background="@color/main_green_color"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/batting"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:src="@drawable/icon_batting_active"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/type_bg"/>-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Batting"
+                            android:gravity="center"
+                            android:id="@+id/battinngText"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:id="@+id/battingSelected"
+                        android:visibility="gone"
+                        android:background="@color/main_green_color"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/bowling"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical">
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="40dp"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:src="@drawable/icon_batting_active"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:background="@drawable/type_bg"/>-->
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Bowling"
+                            android:gravity="center"
+                            android:id="@+id/bowlingText"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/white"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:id="@+id/bowlingSelected"
+                        android:visibility="gone"
+                        android:background="@color/main_green_color"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <ListView
+                android:layout_width="match_parent"
+                android:id="@+id/teamList"
+                android:divider="#0fff"
+                android:paddingBottom="60dp"
+                android:clipToPadding="false"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/coming_soon"
+                android:visibility="gone"
+                android:src="@drawable/coming_soon_images"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/noTeamLL"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_ranking"
+            android:layout_height="120dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:id="@+id/t1"
+            android:layout_margin="5dp"
+            android:textColor="@color/text_color"
+            android:text="Create your first team."/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Create Team"
+        android:textSize="14dp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/montserrat_semibold"
+        android:id="@+id/createTeam"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="8dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/btn_blue_border"
+        android:layout_gravity="center"/>
+
+</RelativeLayout>

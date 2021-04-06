@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Enter the code"
+                android:textSize="16dp"
+                android:id="@+id/t"
+                android:fontFamily="@font/montserrat_regular"
+                android:padding="2dp"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:padding="5sp"
+                    android:maxLength="1"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
+                    android:id="@+id/otp1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="14dp"
+                    android:gravity="center"
+                    android:hint="*"
+                    android:textColorHint="@color/text_color"
+                    android:backgroundTint="#444"
+                    android:inputType="number"
+                    android:textColor="#444"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:padding="5sp"
+                    android:maxLength="1"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
+                    android:gravity="center"
+                    android:id="@+id/otp2"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:inputType="number"
+                    android:backgroundTint="#444"
+                    android:textSize="14dp"
+                    android:hint="*"
+                    android:textColorHint="@color/text_color"
+                    android:textColor="#444"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:padding="5sp"
+                    android:maxLength="1"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
+                    android:id="@+id/otp3"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:inputType="number"
+                    android:hint="*"
+                    android:gravity="center"
+                    android:textColorHint="@color/text_color"
+                    android:textSize="14dp"
+                    android:backgroundTint="#444"
+                    android:textColor="#444"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:padding="5sp"
+                    android:layout_marginLeft="15sp"
+                    android:hint="*"
+                    android:textColorHint="@color/text_color"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:layout_marginRight="15sp"
+                    android:gravity="center"
+                    android:id="@+id/otp4"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="14dp"
+                    android:backgroundTint="#444"
+                    android:textColor="#444"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_primary"
+                android:text="Verify OTp"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:textSize="16dp"
+                android:textAllCaps="true"
+                android:id="@+id/btnSend"/>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

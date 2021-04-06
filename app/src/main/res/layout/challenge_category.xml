@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/logo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/title"
+                    android:textColor="@color/text_color"
+                    android:paddingBottom="3dp"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="title"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/subtitle"
+                    android:textColor="@color/text_color"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="title"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/contestsList" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View More"
+            android:gravity="right|center_vertical"
+            android:fontFamily="@font/montserrat_regular"
+            android:drawableRight="@drawable/ic_right"
+            android:id="@+id/viewMore"
+            android:textSize="12dp"
+            android:textColor="@color/text_color"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+    </LinearLayout>
+
+</LinearLayout>

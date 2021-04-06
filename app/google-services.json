@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "277822369396",
+    "firebase_url": "https://mybat11-bf1d9.firebaseio.com",
+    "project_id": "mybat11-bf1d9",
+    "storage_bucket": "mybat11-bf1d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277822369396:android:7ebf5171ed344466",
+        "android_client_info": {
+          "package_name": "com.img.mybateleven"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277822369396-v8lp7nj59oioa4d4re8dtchi06pdekdg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.img.mybateleven",
+            "certificate_hash": "8e62158656442c51be0a0cf4143a77ed0ae1e6cf"
+          }
+        },
+        {
+          "client_id": "277822369396-u909bil2o2n71v60s1hl7453bp80f1hj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.img.mybateleven",
+            "certificate_hash": "8d6fa7774c15f05b1a4a8a2e10773f50849b2d3f"
+          }
+        },
+        {
+          "client_id": "277822369396-mek9gpgt6gjv4ngu14kv7fr3un8vhi6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASTqWydoEPoplhM79SAYFWx_wU7KmF0Oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277822369396-trb1k12prnmnma4suqgredo96cj52of5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

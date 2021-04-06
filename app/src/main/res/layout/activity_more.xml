@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/drawer"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MoreActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/toolbar"
+                android:background="@color/colorPrimary"
+                app:theme="@style/MyDarkToolbarStyle"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/white"
+                        android:id="@+id/profileImage"
+                        android:layout_gravity="center_vertical"
+                        android:layout_centerVertical="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="15dp"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="14dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_centerVertical="true"
+                        android:text="MORE"/>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:paddingLeft="15dp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/invitefriends"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/invite_friends"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Invite Friends"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/contestcode"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/contest_invite"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Contest Invite Code"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/whatsapp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/whatsapp_update"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Quick Support"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/aboutus"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/about_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:textSize="13dp"
+                                android:text="About Us"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/ponitsystem"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/point_system_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Fantasy Points System"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/howtoplay"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/how_play_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="How To Play"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:id="@+id/terms"
+                        android:gravity="center_vertical"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/terms_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Terms and Conditions"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/helpdesk"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/helpdesk_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Helpdesk"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/job"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/job_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Jobs"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/faq"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/legality_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="FAQ's"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/fairplay"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/legality_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="FairPlay"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/legality"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/legality_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Legality"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:id="@+id/privacypolicy"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:src="@drawable/legality_more"
+                            android:layout_marginRight="20dp"
+                            android:layout_height="20dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:paddingTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:text="Privacy Policy"
+                                android:textSize="14dp"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/border_color_social"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+        <include layout="@layout/footer"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_gravity="start"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:id="@+id/profileLL"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:background="#eee">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:id="@+id/userImage"
+                android:layout_height="50dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/teamName"
+                    android:textColor="@color/text_color"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:src="@drawable/right_arrow"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/myProfile"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_profile"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_marginLeft="60dp"
+            android:background="@color/text_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/wallet"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_balance"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="My Balance"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:id="@+id/btnAddCash"
+                android:paddingRight="15dp"
+                android:text=""
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_semibold"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:visibility="gone"
+            android:id="@+id/rewards"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_rewards"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Rewards &amp; Offers"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/invite"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_referrals"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Referrals"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_marginLeft="60dp"
+            android:background="@color/text_color"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/settings"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/my_info"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Info &amp; Settings"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:id="@+id/pointSystem"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/point_system"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Point System"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/text_color"
+                android:textSize="14dp"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

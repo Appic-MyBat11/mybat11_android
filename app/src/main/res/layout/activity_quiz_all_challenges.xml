@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f2f2f2"
+    android:layout_height="match_parent"
+    tools:context=".Activity.QuizAllChallengesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:background="@color/colorPrimary">
+
+            <include layout="@layout/toolbar"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="10dp"
+                android:background="@drawable/btn_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="match name"
+                    android:id="@+id/match_name"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="@color/text_color"
+                    android:text="00:00:00"
+                    android:id="@+id/timeRemaining"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="3dp"
+            android:elevation="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winnings"
+                android:fontFamily="@font/montserrat_regular"
+                android:id="@+id/winning"
+                android:textColor="#444f5b"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teams"
+                android:id="@+id/teams"
+                android:textAllCaps="true"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="#444f5b"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winners"
+                android:textAllCaps="true"
+                android:textColor="#444f5b"
+                android:id="@+id/winners"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:text="Entry"
+                android:id="@+id/entry"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="#444f5b"
+                android:gravity="center"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+<!--            <android.support.v4.widget.SwipeRefreshLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:id="@+id/swipeRefreshLayout"-->
+<!--                >-->
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#0444"
+                    android:dividerHeight="0px"
+                    android:scrollbars="none"
+                    android:id="@+id/challengeList"/>
+
+<!--            </android.support.v4.widget.SwipeRefreshLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/createTeamLL"
+            android:background="@color/blue"
+            android:padding="5dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="Create Team"
+                android:textSize="16dp"
+                android:textAllCaps="false"
+                android:id="@+id/btnCreateTeam"
+                android:paddingLeft="40dp"
+                android:paddingRight="40dp"
+                android:textColor="@color/blue"
+                android:fontFamily="@font/montserrat_semibold"
+                android:background="@drawable/btn_white"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/myteamll"
+            android:visibility="gone"
+            android:elevation="5dp"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/joinedll"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="11dp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="Joined Contests"
+                    android:textColor="@color/font_color" />
+                <TextView
+                    android:id="@+id/totalJoined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:textSize="12dp"
+                    android:textAllCaps="true"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="1dp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:paddingBottom="1dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:background="@drawable/m_bg"
+                    android:textColor="@color/white"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/pricecard_bottomsheet"/>
+</android.support.design.widget.CoordinatorLayout>

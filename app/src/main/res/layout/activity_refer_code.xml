@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ReferCodeActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="6dp"
+                android:layout_margin="10dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        style="@style/StyledTilEditText"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/inviteCode">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:inputType="textCapCharacters"
+                            android:maxLength="10"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:hint="Enter Invite Code"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        app:helperTextTextAppearance="@style/helperText"
+                        app:helperText="You will receive an OTP for verification"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        style="@style/StyledTilEditText"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/mobile">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:textSize="13dp"
+                            android:textColorHint="@color/text_color"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:hint="Mobile Number"/>
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        app:helperText="No spam, We promise!"
+                        app:helperTextTextAppearance="@style/helperText"
+                        style="@style/StyledTilEditText"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/email">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_color"
+                            android:inputType="textEmailAddress"
+                            android:textColorHint="@color/text_color"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textSize="13dp"
+                            android:hint="Email"/>
+
+                    </android.support.design.widget.TextInputLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_height="wrap_content">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:fontFamily="@font/montserrat_semibold"
+                            app:helperTextTextAppearance="@style/helperText"
+                            style="@style/StyledTilEditText"
+                            app:helperText="Minimum 8 characters with 1 number/symbol"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/password">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/text_color"
+                                android:textSize="13dp"
+                                android:textColorHint="@color/text_color"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:inputType="textPassword"
+                                android:hint="Password"/>
+
+                        </android.support.design.widget.TextInputLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_eye_accent"
+                            android:id="@+id/seePassword"
+                            android:layout_alignParentRight="true"
+                            android:padding="10dp" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_margin="12dp"
+                        android:text="Register"
+                        android:id="@+id/btnRegister"
+
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textAllCaps="true"
+                        android:background="@drawable/btn_green"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:text="By registering, I agree to MyBat11's"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12dp"
+                            android:gravity="center"
+                            android:textColor="@color/design_default_color_primary"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:id="@+id/tc"
+                            android:text=" T&amp;C's"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_gravity="bottom"
+    android:orientation="horizontal"
+    >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:onClick="LOGIN"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Already a user? "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="12dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/design_default_color_primary"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

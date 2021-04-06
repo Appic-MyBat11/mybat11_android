@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f5f4"
+    tools:context=".Activity.FantasyScorecardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scorecard"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:elevation="5dp"
+                android:background="@color/white"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="2.5"
+                    android:textColor="@color/font_color"
+                    android:text="Player"
+                    android:id="@+id/player"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:padding="3dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:textColor="@color/font_color"
+                    android:text="Selection"
+                    android:id="@+id/selection"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:padding="3dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:textColor="@color/font_color"
+                    android:text="Points"
+                    android:gravity="right"
+                    android:id="@+id/points"
+                    android:padding="3dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/swipeRefreshLayout">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/font_color"
+                    android:dividerHeight="1px"
+                    android:id="@+id/scoreCard"/>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Match Not Started Yet"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/text_color"
+            android:id="@+id/noScorecard"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scoreSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:background="#fff"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Points Breakup"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Close"
+                    android:id="@+id/close"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="70dp"
+                    android:id="@+id/playerImage"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:padding="5dp"
+                        android:textColor="@color/text_color"
+                        android:id="@+id/playerName"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:padding="5dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/text_color"
+                            android:id="@+id/selectper"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:padding="5dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/text_color"
+                            android:id="@+id/playerPoints"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/font_color"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Role"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="points"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#f4f5f4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Starting 11"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/startingPoint"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Runs"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/runPoints"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#f4f5f4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="4's"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/fourPoints"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="6's"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/sixPoints"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#f4f5f4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Strike Rate"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/strikeRatePoints"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="50/100"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/points50"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#f4f5f4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Duck"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/duckPoints"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Wickets"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:fontFamily="@font/montserrat_regular"
+                    android:id="@+id/wicketspoints"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#f4f5f4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Maiden Overs"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/maidenPoints"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Economy Rate"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/economypoints"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#f4f5f4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Bonus"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/bonusPoints"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Thrower"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/throwerPoints"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Hitter"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/hitterPoints"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Catch"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/catchPoints"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:background="#f4f5f4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_weight="1"
+                    android:text="Stumping"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text=""
+                    android:id="@+id/stumpingPoints"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/text_color"
+                    android:textSize="12dp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
